@@ -1,4 +1,3 @@
-// FooterSelect.js
 import React from "react";
 
 const FooterSelect = ({ label, options }) => {

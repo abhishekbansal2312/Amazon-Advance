@@ -9,7 +9,7 @@ import Location from "./navbar/Location";
 
 export default function Navbar() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
       <nav className="flex items-center justify-between p-1 container mx-auto max-w-screen-xl">
         <div className="flex items-center space-x-4 mt-1">
           {/* Logo Section */}

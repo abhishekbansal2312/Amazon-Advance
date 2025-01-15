@@ -1,7 +1,6 @@
 export default function SearchBar() {
   return (
     <div className="flex items-center bg-white rounded-md shadow-md">
-      {/* Dropdown Menu */}
       <div className="bg-gray-300 rounded-l-md px-2 py-2 max-w-12 border-r-2">
         <select className="bg-gray-300 text-black focus:outline-none border-r-2">
           <option value="all">All</option>
@@ -11,13 +10,13 @@ export default function SearchBar() {
           <option value="home">Home</option>
         </select>
       </div>
-      {/* Input Field */}
+
       <input
         type="text"
         placeholder="Search"
         className="flex-grow p-2 text-black focus:outline-none"
       />
-      {/* Search Button */}
+
       <button className="px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-r-md">
         <img
           className="w-6 h-6"

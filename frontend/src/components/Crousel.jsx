@@ -18,43 +18,46 @@ export default function Crousel() {
   };
 
   return (
-    <div className="relative w-full h-screen">
-      <Slider {...settings}>
-        <div className="relative w-full h-full">
-          <img
-            src={homeImage1}
-            alt="Image 1"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
-        </div>
-        <div className="relative w-full h-full">
-          <img
-            src={homeImage2}
-            alt="Image 2"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
-        </div>
-        <div className="relative w-full h-full">
-          <img
-            src={homeImage3}
-            alt="Image 3"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
-        </div>
-        <div className="relative w-full h-full">
-          <img
-            src={homeImage4}
-            alt="Image 4"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
-        </div>
-      </Slider>
+    <div className="relative w-full h-72 overflow-hidden">
+      {/* Carousel Content */}
+      <div className="absolute w-full h-full top-0 z-0">
+        <Slider {...settings}>
+          <div className="relative w-full h-screen">
+            <img
+              src={homeImage1}
+              alt="Image 1"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
+          </div>
+          <div className="relative w-full h-screen">
+            <img
+              src={homeImage2}
+              alt="Image 2"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
+          </div>
+          <div className="relative w-full h-screen">
+            <img
+              src={homeImage3}
+              alt="Image 3"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
+          </div>
+          <div className="relative w-full h-screen">
+            <img
+              src={homeImage4}
+              alt="Image 4"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-50"></div>
+          </div>
+        </Slider>
+      </div>
 
-      {/* Custom Navigation */}
+      {/* Navigation Buttons */}
       <button
         className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl z-10"
         onClick={() => document.querySelector(".slick-prev").click()}
@@ -67,6 +70,9 @@ export default function Crousel() {
       >
         &#8250;
       </button>
+
+      {/* Underflow Adjustment */}
+      <div className="absolute w-full top-1/3 z-[-1] h-2/3 bg-transparent"></div>
     </div>
   );
 }

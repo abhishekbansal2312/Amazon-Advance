@@ -1,4 +1,3 @@
-// FooterSection.js
 import React from "react";
 
 const FooterSection = ({ title, links }) => {
