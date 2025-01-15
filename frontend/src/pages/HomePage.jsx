@@ -5,6 +5,7 @@ import DealSection from "../components/DealSection";
 import data from "./data.json"; // Directly importing the JSON file
 import Sidebar from "../components/SideBar";
 import HorizontalScroller from "../components/HorizontalScroller";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const [deals, setDeals] = useState([]);
@@ -20,14 +21,16 @@ export default function HomePage() {
       <Sidebar />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full p-4">
         {deals.map((deal, index) => (
-          <DealSection
-            key={index}
-            title={deal.title}
-            images={deal.images}
-            imageHeadings={deal.imageHeadings}
-            linkText={deal.linkText}
-            linkHref={deal.linkHref}
-          />
+          <Link to={"/products"}>
+            <DealSection
+              key={index}
+              title={deal.title}
+              images={deal.images}
+              imageHeadings={deal.imageHeadings}
+              linkText={deal.linkText}
+              linkHref={deal.linkHref}
+            />
+          </Link>
         ))}
       </div>
       <HorizontalScroller />

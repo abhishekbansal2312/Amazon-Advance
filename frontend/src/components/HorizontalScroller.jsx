@@ -42,6 +42,26 @@ const HorizontalScroller = () => {
       imgSrc: "https://m.media-amazon.com/images/I/515nNlnjmSL._AC_SY400_.jpg",
       alt: "Product 4",
     },
+    {
+      id: 1,
+      imgSrc: "https://m.media-amazon.com/images/I/61Kc-w-ePUL._AC_SY400_.jpg",
+      alt: "Product 1",
+    },
+    {
+      id: 2,
+      imgSrc: "https://m.media-amazon.com/images/I/51FSD2qts-L._AC_SY400_.jpg",
+      alt: "Product 2",
+    },
+    {
+      id: 3,
+      imgSrc: "https://m.media-amazon.com/images/I/71QfC+NELFL._AC_SY400_.jpg",
+      alt: "Product 3",
+    },
+    {
+      id: 4,
+      imgSrc: "https://m.media-amazon.com/images/I/515nNlnjmSL._AC_SY400_.jpg",
+      alt: "Product 4",
+    },
   ];
 
   return (

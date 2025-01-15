@@ -6,6 +6,7 @@ import SignUp from "./navbar/SignUp";
 import ReturnOrder from "./navbar/ReturnOrder";
 import image from "../assets/image.png";
 import Location from "./navbar/Location";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -14,9 +15,11 @@ export default function Navbar() {
         <div className="flex items-center space-x-4 mt-1">
           {/* Logo Section */}
           <div className="bg-gray-900 hover:border-2 h-14 w-18 flex items-center justify-center">
-            <a href="#" className="flex items-center">
-              <img src={image} alt="Logo" className="w-18 h-12" />
-            </a>
+            <Link to="/">
+              <a href="#" className="flex items-center">
+                <img src={image} alt="Logo" className="w-18 h-12" />
+              </a>
+            </Link>
           </div>
           <Location />
         </div>
@@ -27,11 +30,13 @@ export default function Navbar() {
         </div>
 
         {/* Right Section (Language, SignUp, ReturnOrder, Cart) */}
-        <div className="flex items-center space-x-4 flex-shrink-0">
+        <div className="flex items-center space-x-4 flex-shrink-0 mr-6">
           <Language />
           <SignUp />
           <ReturnOrder />
-          <Cart />
+          <Link to="/cart">
+            <Cart />
+          </Link>
         </div>
       </nav>
     </div>
