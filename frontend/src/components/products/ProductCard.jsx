@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../slices/cartSlice";
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.cart.items);
+  const [id, setId] = React.useState(0);
+  const findItemsId = () => {
+    const id = items.map((item) => item.id);
+    setId(id);
+  };
+
   return (
     <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow-md">
       <div className="flex justify-center items-center">
@@ -20,7 +30,7 @@ const ProductCard = ({ product }) => {
           </span>
           {product.discount && (
             <span className="text-sm text-red-500 ml-2 line-through">
-              ₹{product.mrp}
+              ₹{product.originalPrice}
             </span>
           )}
         </div>
@@ -31,8 +41,15 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
         <div className="mt-3">
-          <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
-            Add to Cart
+          <button
+            onClick={() => dispatch(addItem(product))}
+            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
+          >
+            {id === product.id ? (
+              <span className="text-sm text-white ml-2">Added</span>
+            ) : (
+              <span className="text-sm text-white ml-2">Add to Cart</span>
+            )}
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import menu from "../assets/menu.png";
-import republicsale from "../assets/republicsale.png";
-import { useSidebar } from "../context/SidebarContext";
+import menu from "../../assets/menu.png";
+import republicsale from "../../assets/republicsale.png";
+import { useSidebar } from "../../context/SidebarContext";
 
 export default function TagNavbar() {
   const { toggleSidebar } = useSidebar();

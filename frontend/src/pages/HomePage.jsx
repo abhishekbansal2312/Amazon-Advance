@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Tabs from "../components/Tabs";
-import Crousel from "../components/Crousel";
-import DealSection from "../components/DealSection";
+import Tabs from "../components/navbar/Tabs";
+import Crousel from "../components/home/Crousel";
+import DealSection from "../components/home/DealSection";
 import data from "./data.json"; // Directly importing the JSON file
-import Sidebar from "../components/SideBar";
-import HorizontalScroller from "../components/HorizontalScroller";
+import Sidebar from "../components/home/SideBar";
+import HorizontalScroller from "../components/home/HorizontalScroller";
 import { Link } from "react-router-dom";
 
 export default function HomePage() {

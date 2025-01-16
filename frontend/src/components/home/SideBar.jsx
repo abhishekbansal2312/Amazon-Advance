@@ -1,5 +1,5 @@
 import React from "react";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../../context/SidebarContext";
 
 export default function Sidebar() {
   const { isSidebarOpen, toggleSidebar } = useSidebar();

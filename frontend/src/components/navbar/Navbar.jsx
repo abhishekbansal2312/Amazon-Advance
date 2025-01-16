@@ -1,11 +1,11 @@
 import React from "react";
-import Cart from "./navbar/Cart";
-import Language from "./navbar/Language";
-import SearchBar from "./navbar/SearchBar";
-import SignUp from "./navbar/SignUp";
-import ReturnOrder from "./navbar/ReturnOrder";
-import image from "../assets/image.png";
-import Location from "./navbar/Location";
+import Cart from "./Cart";
+import Language from "./Language";
+import SearchBar from "./SearchBar";
+import SignUp from "./SignUp";
+import ReturnOrder from "./ReturnOrder";
+import image from "../../assets/image.png";
+import Location from "./Location";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {

@@ -1,9 +1,9 @@
 // Footer.js
 import React from "react";
-import FooterSection from "./footer/FooterSection";
-import FooterSelect from "./footer/FooterSelect";
-import FooterBottom from "./footer/FooterBottom";
-import image from "../assets/image.png";
+import FooterSection from "./FooterSection";
+import FooterSelect from "./FooterSelect";
+import FooterBottom from "./FooterBottom";
+import image from "../../assets/image.png";
 
 export default function Footer() {
   const getToKnowUsLinks = [
